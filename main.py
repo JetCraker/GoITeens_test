@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from project_db import Conversion, Session
+from project_db import Conversion, Session, Base, engine
 import requests
 
 app = Flask(__name__)
@@ -43,4 +43,5 @@ def convert():
     return render_template('index.html', result=result, to_currency=to_currency)
 
 if __name__ == '__main__':
+    Base.metadata.create_all(engine)
     app.run(debug=True)
