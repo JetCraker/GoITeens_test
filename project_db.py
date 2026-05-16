@@ -18,5 +18,3 @@ class Conversion(Base):
     to_currency: Mapped[str] = mapped_column(String(3))
     amount: Mapped[float] = mapped_column(Float)
     result: Mapped[float] = mapped_column(Float)
-
-Base.metadata.create_all(engine)

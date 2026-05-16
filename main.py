@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from project_db import Base, Conversion, Session
+from project_db import Conversion, Session
 import requests
 
 app = Flask(__name__)
