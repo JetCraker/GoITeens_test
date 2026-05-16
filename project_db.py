@@ -1,12 +1,9 @@
 from sqlalchemy import String, Float, create_engine
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, sessionmaker
 
-PGUSER = "Ваші_дані"
-PGPASSWORD = "Ваші_дані"
 
 engine = create_engine(
-    f"postgresql+psycopg2://{PGUSER}:{PGPASSWORD}@localhost:5433/web_convertor",
-    echo=True
+    "postgresql+psycopg2://flask_database_hm8f_user:04wuX0sGZ6Y29Cp4nU6LuFIUPIRQV1AD@dpg-d840hi7aqgkc73a7fo70-a.oregon-postgres.render.com/flask_database_hm8f"
 )
 Session = sessionmaker(bind=engine)
 
